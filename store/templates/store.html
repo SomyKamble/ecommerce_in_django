@@ -18,13 +18,13 @@
                 <h4 class="card-title">
                   <a href="#">{{product.name}}</a>
                 </h4>
-                <h5>$24.99</h5>
+                <h5>${{ product.price|floatformat:2 }}</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
               </div>
               <div class="card-footer">
                   <button class="btn btn-outline-secondary"> Add To cart</button>
                   <a class="btn btn-outline-success" href="#">View</a>
-                  <h4 style="display:inline; float :right;"> {{ product.price|floatformat:2 }}</h4>
+                  <h4 style="display:inline; float :right;"> ${{ product.price|floatformat:2 }}</h4>
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
               </div>
 
