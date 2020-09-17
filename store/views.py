@@ -8,7 +8,6 @@ def store(request):
     context={
         'products' :products
     }
-
     return render(request,'store.html',context)
 
 def cart(request):
@@ -19,7 +18,8 @@ def cart(request):
     else:
         items=[]
     context={
-        'items':items
+        'items':items,
+        'customer':customer
     }
 
     return render(request,'cart.html',context)

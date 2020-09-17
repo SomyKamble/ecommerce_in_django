@@ -32,8 +32,9 @@
 					<div style="flex:1"><strong>Quantity</strong></div>
 					<div style="flex:1"><strong>Total</strong></div>
 				</div>
+
 				{% for item in items %}
-				item.product.name
+
 			<div class="cart-row">
 					<div style="flex:2"><img class="row-image" src="{{item.product.imageURL }}"></div>
 					<div style="flex:2"><p>{{item.product.name}}</p></div>
@@ -46,10 +47,10 @@
 							<img class="chg-quantity" src="{% static  'img/arrow-down.png' %}">
 						</div>
 					</div>
-					<div style="flex:1"><p>$32</p></div>
-				{% endfor %}
-				</div>
+					<div style="flex:1"><p>{{item.product.price|floatformat:2}}*{{item.quantity}}</p></div>
 
+				</div>
+			{% endfor %}
 
 			</div>
 		</div>
